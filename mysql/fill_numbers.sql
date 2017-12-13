@@ -9,6 +9,7 @@ create procedure fill_numbers()
 deterministic
 begin
   declare counter int default 1;
+  delete from numbers;
   insert into numbers values (1);
   while counter < 1000000
   do
